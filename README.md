@@ -7,8 +7,8 @@ using TF-IDF text vectorization + Logistic Regression, served with Streamlit.
 ```
 fake-news-detector/
 ├── data/
-│   ├── Fake.csv        <- you add this (see Step 2)
-│   └── True.csv        <- you add this (see Step 2)
+│   ├── Fake.csv        
+│   └── True.csv        
 ├── model/               <- created automatically after training
 ├── train_model.py       <- trains the model
 ├── app.py                <- the Streamlit web app
