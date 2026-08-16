@@ -72,23 +72,3 @@ streamlit run app.py
 ```
 This opens a browser tab at `http://localhost:8501`. Paste any news text in and click
 "Check Article" to get a REAL/FAKE prediction with a confidence score.
-
-## How it works (for the assignment write-up)
-1. **Text cleaning**: lowercasing, removing URLs/HTML/numbers/punctuation.
-2. **TF-IDF vectorization**: converts article text into numerical features that
-   weigh words by how distinctive they are (common words like "the" are downweighted).
-3. **Logistic Regression**: a simple, fast, and explainable classifier — a strong
-   baseline for text classification tasks like this.
-4. **Evaluation**: accuracy, precision/recall/F1, and a confusion matrix are printed
-   after training so you can discuss model performance in your report.
-
-## Possible extensions (if you want to go further for extra credit)
-- Try a different classifier (e.g. `PassiveAggressiveClassifier`, `MultinomialNB`, or `RandomForestClassifier`) and compare accuracy.
-- Add a "most important words" feature using the model's coefficients, to show *why* it predicted FAKE/REAL.
-- Deploy the Streamlit app for free on Streamlit Community Cloud (streamlit.io/cloud) so it's live on the web, not just local.
-
-## Important caveat to mention in your report
-This model detects **writing style/pattern differences** between the fake and real
-articles *in this specific dataset* — it does not fact-check claims or verify sources.
-It won't generalize perfectly to news outside the dataset's time period/topics. This
-is a standard and expected limitation to call out in a college-level project write-up.
